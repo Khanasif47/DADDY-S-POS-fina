@@ -392,7 +392,7 @@ class ChangeCredentialsIn(BaseModel):
 
 @api.post("/auth/change-credentials")
 async def change_credentials(body: ChangeCredentialsIn, user: dict = Depends(get_current_user)):
-    """Allow the logged-in admin to change their email and/or password.""""
+    """Allow the logged-in admin to change their email and/or password."""
     db_user = await db.users.find_one({"id": user["id"]}, {"_id": 0})
     if not db_user or not verify_password(body.current_password, db_user["password_hash"]):
         raise HTTPException(status_code=401, detail="Current password is incorrect")
