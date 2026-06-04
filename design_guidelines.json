@@ -1,0 +1,119 @@
+{
+  "project_name": "DADDY's Bakery POS",
+  "theme_and_archetype": {
+    "theme": "light",
+    "archetype": "Archetype 5 (Jewel & Luxury) mixed with Archetype 1 (Organic & Earthy)"
+  },
+  "colors": {
+    "background": "#ede7c7",
+    "surface": "#ffffff",
+    "surface_secondary": "#f5f2e6",
+    "primary": "#8B0000",
+    "primary_hover": "#6a0000",
+    "text_primary": "#2c1b18",
+    "text_secondary": "#5a3a31",
+    "border": "rgba(139, 0, 0, 0.15)",
+    "success": "#2e6f40",
+    "warning": "#d97706",
+    "danger": "#dc2626"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Manrope",
+    "brand_font": "DM Serif Display",
+    "rules": {
+      "h1": "text-4xl sm:text-5xl font-heading font-medium tracking-tight text-[#2c1b18]",
+      "h2": "text-2xl sm:text-3xl font-heading font-medium tracking-tight text-[#2c1b18]",
+      "h3": "text-xl sm:text-2xl font-heading font-medium text-[#2c1b18]",
+      "body": "text-base font-body text-[#5a3a31]",
+      "small_label": "text-xs font-body uppercase tracking-[0.1em] text-[#8B0000] font-semibold"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-6 md:p-8",
+    "card_padding": "p-6",
+    "border_radius": "rounded-none md:rounded-sm",
+    "sidebar_width": "w-64",
+    "grid_gaps": "gap-6 md:gap-8"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#8B0000] text-white hover:bg-[#6a0000] rounded-sm px-6 py-2 font-body font-medium transition-colors shadow-sm",
+      "secondary": "bg-transparent border border-[#8B0000] text-[#8B0000] hover:bg-[#8B0000]/5 rounded-sm px-6 py-2 font-body font-medium transition-colors"
+    },
+    "cards": {
+      "base": "bg-white border border-[#8B0000]/10 shadow-[0_4px_20px_rgba(139,0,0,0.03)] rounded-sm"
+    },
+    "inputs": {
+      "base": "border border-[#8B0000]/20 rounded-sm focus:border-[#8B0000] focus:ring-1 focus:ring-[#8B0000] bg-white font-body"
+    },
+    "charts": {
+      "library": "recharts",
+      "patterns": "Use minimalist AreaChart for revenue with #8B0000 gradient fill, BarChart for daily sales, and Donut/PieChart for category mix. Use very light grid lines (stroke='#8B0000' opacity=0.1)."
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-width 1.5, elegant, minimal"
+    }
+  },
+  "screens": {
+    "login": {
+      "layout": "Split screen layout. Left side: image of luxury bakery interior with dark overlay (bg-black/30). Right side: centered login form on warm cream (#ede7c7) background.",
+      "details": "Brand mark 'DADDY's' at the top of the form in DM Serif Display. Input fields for email and password. Primary CTA 'Access Terminal'."
+    },
+    "pos_billing": {
+      "layout": "Left 70%: Top bar with category filters (Bread, Pastries, Cakes), below is a bento grid of product cards. Right 30%: Sticky Cart/Bill section.",
+      "product_card": "Image on top (h-32 object-cover), title, price, add to cart button. Clean white card on cream background.",
+      "cart_section": "White surface, list of selected items with quantity adjusters. Subtotal, GST 5%, Total. Big primary #8B0000 'Checkout' button, secondary 'Hold Bill' button."
+    },
+    "dashboard": {
+      "layout": "Top: 4 summary stat cards (Daily Revenue, Orders, Top Item, Low Stock Warning). Middle: Large Line/Area chart for Monthly Sales. Bottom: Two columns - Recent Transactions table and Category Mix Donut chart."
+    },
+    "inventory": {
+      "layout": "Full width list/table. Top right: 'Add Product' button. Table columns: Image, Name, Category, Stock Level, Unit Price, Status.",
+      "details": "Highlight low stock items with a subtle red/warning badge. Use Shadcn Table."
+    },
+    "employees": {
+      "layout": "Grid of employee profile cards or a clean table. Employee details: Name, Role (Cashier, Baker, Manager), Monthly Salary, Payment Status (Paid/Unpaid), Pay button."
+    },
+    "retailer_payables": {
+      "layout": "Ledger style table. List of suppliers/vendors, Amount Owed, Last Paid Date, Status. Button to 'Settle Due'.",
+      "details": "Keep it very dense and clean, like a financial sheet. Use Manrope font for numbers for clarity."
+    },
+    "online_orders": {
+      "layout": "Kanban style or status pipeline (New, Preparing, Ready, Dispatched/Collected).",
+      "details": "Cards show order source (Website), Items, Total, Customer Name. Button to 'Push to POS/Accept'."
+    }
+  },
+  "image_assets": {
+    "login_background": {
+      "url": "https://images.unsplash.com/photo-1555507036-ab1d4075c6f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1536&q=80",
+      "description": "Luxurious bakery interior"
+    },
+    "products": [
+      {
+        "url": "https://images.unsplash.com/photo-1763026337559-f1c5e980c539?ixlib=rb-4.1.0&auto=format&fit=crop&w=600&q=80",
+        "category": "bread",
+        "description": "Baguettes"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1767065886275-2a8ff2eaa13a?ixlib=rb-4.1.0&auto=format&fit=crop&w=600&q=80",
+        "category": "bread",
+        "description": "Focaccia"
+      },
+      {
+        "url": "https://images.pexels.com/photos/30884565/pexels-photo-30884565.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "category": "pastry",
+        "description": "Croissants"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1763316727676-3f3b96188def?ixlib=rb-4.1.0&auto=format&fit=crop&w=600&q=80",
+        "category": "cake",
+        "description": "Chocolate cake"
+      }
+    ]
+  },
+  "testing": {
+    "attributes": "All interactive elements must use kebab-case data-testid (e.g., data-testid='checkout-button', data-testid='category-filter-bread')."
+  }
+}

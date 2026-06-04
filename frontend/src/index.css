@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Manrope:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #ede7c7;
+  --cream-soft: #f5f2e6;
+  --burgundy: #8b0000;
+  --burgundy-deep: #6a0000;
+  --ink: #2c1b18;
+  --ink-soft: #5a3a31;
+  --line: rgba(139, 0, 0, 0.14);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:
+    radial-gradient(rgba(139, 0, 0, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(139, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px;
+  background-position: 0 0, 12px 12px;
+}
+
+.font-serif-display {
+  font-family: "DM Serif Display", "Cormorant Garamond", serif;
+  letter-spacing: -0.01em;
+}
+.font-serif {
+  font-family: "Cormorant Garamond", "DM Serif Display", serif;
+}
+.font-sans {
+  font-family: "Manrope", -apple-system, sans-serif;
+}
+
+.label-eyebrow {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--burgundy);
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: var(--burgundy);
+  color: #fff;
+  padding: 0.65rem 1.25rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 200ms ease, transform 150ms ease;
+  font-family: "Manrope", sans-serif;
+}
+.btn-primary:hover {
+  background: var(--burgundy-deep);
+}
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--burgundy);
+  border: 1px solid var(--burgundy);
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 200ms ease;
+}
+.btn-outline:hover {
+  background: rgba(139, 0, 0, 0.06);
+}
+
+.card-luxe {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 2px 24px rgba(139, 0, 0, 0.04);
+}
+
+.divider-thin {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.25), transparent);
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: rgba(139, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 420ms ease-out both;
+}
+
+@layer base {
+  :root {
+    --background: 50 41% 86%;
+    --foreground: 12 32% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 12 32% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 12 32% 13%;
+    --primary: 0 100% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 50 30% 92%;
+    --secondary-foreground: 12 32% 13%;
+    --muted: 50 30% 92%;
+    --muted-foreground: 12 25% 35%;
+    --accent: 50 30% 92%;
+    --accent-foreground: 12 32% 13%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 100% 27% / 0.14;
+    --input: 0 100% 27% / 0.18;
+    --ring: 0 100% 27%;
+    --radius: 0.25rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+}

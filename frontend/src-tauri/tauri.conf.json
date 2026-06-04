@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DADDY's Bakery POS",
+  "version": "1.0.0",
+  "identifier": "com.daddys.pos",
+  "build": {
+    "beforeDevCommand": "yarn start",
+    "beforeBuildCommand": "yarn build",
+    "devUrl": "http://localhost:3000",
+    "frontendDist": "../build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "DADDY's Bakery POS",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1100,
+        "minHeight": 720,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true,
+        "decorations": true,
+        "transparent": false,
+        "backgroundColor": "#ede7c7"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis", "deb", "appimage", "dmg"],
+    "icon": [
+      "icons/icon.png",
+      "icons/icon.ico",
+      "icons/icon.icns"
+    ],
+    "windows": {
+      "wix": {
+        "language": "en-US"
+      },
+      "nsis": {
+        "installerIcon": "icons/icon.ico",
+        "installMode": "perMachine"
+      }
+    },
+    "publisher": "DADDY's Bakery",
+    "copyright": "© 2026 DADDY's Bakery",
+    "category": "Business",
+    "shortDescription": "Point-of-sale terminal for DADDY's Bakery & Confectionary",
+    "longDescription": "Luxury POS, inventory, payroll, retailer payables and online order management for DADDY's Bakery."
+  }
+}
